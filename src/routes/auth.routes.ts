@@ -12,6 +12,14 @@ authRouter.post(
   ],
   AuthController.register
 );
-authRouter.post('/login', AuthController.login);
+
+authRouter.post(
+  '/login',
+  [
+    check('email', 'Incorrect email!').normalizeEmail().isEmail(),
+    check('password', 'Enter password!').exists()
+  ],
+  AuthController.login
+);
 
 export default authRouter;
