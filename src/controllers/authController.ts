@@ -1,10 +1,13 @@
 import { Request, Response } from 'express';
 import bcryptjs from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 import { validationResult } from 'express-validator';
 import { IUser, User } from '../models/User';
 
+const jwtSecret: string = process.env.jwtSecret!;
+
 class AuthController {
-  async register (req:Request, res:Response):Promise<void> {
+  async register (req:Request, res:Response): Promise<void> {
     try {
       const errors = validationResult(req);
 
@@ -40,7 +43,44 @@ class AuthController {
   }
 
   async login (req:Request, res:Response):Promise<void> {
-    // TODO: login method
+    try {
+      const errors = validationResult(req);
+
+      if (!errors.isEmpty()) {
+        res.status(400).json({
+          errors: errors.array(),
+          message: 'Incorrect login data!'
+        });
+
+        return;
+      }
+
+      const { email, password } = req.body;
+
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        res.status(400).json({ message: 'User not found!' });
+        return;
+      }
+
+      const isPasswordMatch = await bcryptjs.compare(password, user.password);
+
+      if (!isPasswordMatch) {
+        res.status(400).json({ message: 'Incorrect password!' });
+        return;
+      }
+
+      const token = jwt.sign(
+        { userId: user.id },
+        jwtSecret,
+        { expiresIn: '1h' }
+      );
+
+      res.json({ token, userId: user.id });
+    } catch (e) {
+      res.status(500).json(e.message);
+    }
   }
 }
 

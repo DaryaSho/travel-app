@@ -19,6 +19,7 @@ export default class AppServer {
   }
 
   async start () {
+    this.initMiddlewares();
     this.initRoutes();
     await this.initDatabase();
     this.startListening();
