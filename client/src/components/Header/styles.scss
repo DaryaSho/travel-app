@@ -1,0 +1,35 @@
+.header {
+  background-color: #181E25;
+  color: #fff;
+  padding: 25px 0;
+  
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__inputs {
+    display: flex;
+  }
+
+  &__inputs-iitem {
+    margin-right: 13px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 36px;
+    display: flex;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+.logo {
+  margin: 0 5px;
+}
