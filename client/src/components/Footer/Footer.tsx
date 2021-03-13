@@ -2,16 +2,16 @@
 import React from 'react';
 import './styles.scss';
 import Github from './Github';
-import rsschool from '../../assets/logo/rs_school.svg';
+import rsschool from '../../assets/icons/rs_school.svg';
 
 const Footer: React.FC = () => {
   return (
     <div className="footer">
     <div className='container container__footer'>
         <div className='github__container'>
-          <Github github='daryasho' />
           <Github github='hotinec' />
           <Github github='ulyana-zh' />
+          <Github github='daryasho' />
           <Github github='andevrom' />
         </div>
         <div className='rschool'>

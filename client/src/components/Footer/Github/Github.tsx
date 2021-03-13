@@ -1,6 +1,6 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
-import githubLogo from '../../../assets/logo/github.svg';
+import githubLogo from '../../../assets/icons/github.svg';
 import './styles.scss';
 
 export interface GithubProps {

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Search from './Search';
 import Lang from './Lang';
-import logo from '../../assets/logo/logo.svg';
+import logo from '../../assets/icons/logo.svg';
 import './styles.scss';
 
 const Header: React.FC = () => {
@@ -15,10 +15,10 @@ const Header: React.FC = () => {
             Travel<img src={logo} alt="logo" className="logo" />App
           </h4>
         </Link>
-        <ul className="header__inputs">
+        {/* <ul className="header__inputs">
           <li className="header__inputs-item"><Search /></li>
           <li className="header__inputs-item"><Lang /></li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

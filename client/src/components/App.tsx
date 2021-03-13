@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import { useHttp } from '../hooks/http.hook';
 import Header from './Header';
 import Explore from './Explore';
+import TextBlock from './TextBlock';
 import Footer from './Footer';
 import Home from '../pages/Home';
 
@@ -30,11 +31,7 @@ const App: React.FC = () => {
       <Header />
       {/* <Route path="/" component={Home} exact /> */}
       <Explore />
-      <div style={{
-        height: '500px',
-        width: '100%',
-        backgroundColor: 'white',
-      }} />
+      <TextBlock />
       <Footer />
     </div>
   );
