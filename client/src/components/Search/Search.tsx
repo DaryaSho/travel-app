@@ -1,7 +1,7 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
-import search from '../../../assets/icons/search.svg';
-import clear from '../../../assets/icons/clear.svg';
+import search from '../../assets/icons/search.svg';
+import clear from '../../assets/icons/clear.svg';
 import './styles.scss';
 
 const Search: React.FC = () => {

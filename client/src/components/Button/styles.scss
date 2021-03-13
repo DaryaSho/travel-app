@@ -11,6 +11,10 @@
   justify-content: space-between;
   transition: 1.5s ease-out all;
 
+  @media (max-width: 400px) {
+    font-size: 1.2rem;
+  } 
+
   p {
     margin-right: 40px;
   }

@@ -4,13 +4,14 @@ import arrow from '../../assets/icons/keyboard_arrow_right.svg';
 import './styles.scss';
 
 interface Button {
-  text: string
+  text: string;
 }
 
 const Button: React.FC<Button> = ({ text }) => {
   return (
-    <button className="button btn btn__main">
-      <p>{text}</p><img src={arrow} alt='arrow' />
+    <button className='button btn btn__main'>
+      <p>{text}</p>
+      <img src={arrow} alt='arrow' />
     </button>
   );
 };

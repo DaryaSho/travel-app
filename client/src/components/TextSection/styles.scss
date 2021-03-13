@@ -1,6 +1,22 @@
 .text__greeting {
-  font-size: 10rem;
-  color: #ebebeb68;
+  font-size: 10rem; 
+  background: white;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    filter: blur(10px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    background: linear-gradient(-45deg, #ffae00, #a70497, #7503b3, #ff9900);  
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+  }
 
   @media (max-width: 800px) {
     font-size: 8rem;
@@ -8,19 +24,15 @@
 
   @media (max-width: 600px) {
     font-size: 4rem;
-    color: #87878793;
   }
 }
 
 .text-section {
-  padding: 40px 0;
-  background: linear-gradient(-45deg, #275775, #3a1f75, #560d7d, #056a79);  
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+  padding: 20px 0;
+  
 
   @media (max-width: 600px) {
-    padding: 60px 0;
-    background: #fff;
+    padding: 80px 0;
   }
 }
 

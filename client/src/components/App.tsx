@@ -4,9 +4,7 @@ import { useHttp } from '../hooks/http.hook';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../pages/Home';
-import CountryCard from './CountryCard';
-import CountyCard from './CountryCard/CountryCard';
-import countryImg from '../assets/temp/iceland_main.png';
+import Video from './Video';
 
 const App: React.FC = () => {
   const [countries, setCountries] = useState([]);
@@ -31,7 +29,7 @@ const App: React.FC = () => {
     <div className='wrapper'>
       <Header />
       <Route path='/' component={Home} exact />
-      <CountyCard name='Iceland' capital='REYKJAVIK' image={countryImg} />
+      <Video url='https://vimeo.com/335870770' />
       <Footer />
     </div>
   );

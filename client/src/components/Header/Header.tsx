@@ -15,10 +15,10 @@ const Header: React.FC = () => {
             Travel<img src={logo} alt="logo" className="logo" />App
           </h4>
         </Link>
-        {/* <ul className="header__inputs">
+        <ul className="header__inputs">
           <li className="header__inputs-item"><Search /></li>
           <li className="header__inputs-item"><Lang /></li>
-        </ul> */}
+        </ul>
       </div>
     </header>
   );
