@@ -2,16 +2,16 @@
 import React from 'react';
 import './styles.scss';
 
-const TextBlock: React.FC = () => {
+const TextSection: React.FC = () => {
   return (
-    <div className='container__text-block'>
+    <section className='text-section parallax'>
       <div className='container'>
         <p className='text text__greeting'>
           Be inspired. <br />Travel.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default TextBlock;
+export default TextSection;

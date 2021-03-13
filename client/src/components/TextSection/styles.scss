@@ -1,5 +1,6 @@
 .text__greeting {
   font-size: 10rem;
+  color: #ebebeb68;
 
   @media (max-width: 800px) {
     font-size: 8rem;
@@ -7,17 +8,19 @@
 
   @media (max-width: 600px) {
     font-size: 4rem;
+    color: #87878793;
   }
 }
 
-.container__text-block {
+.text-section {
   padding: 40px 0;
-  background: linear-gradient(-45deg, #fa663d, #7f22a0, #810ebf, #cb7709);  
+  background: linear-gradient(-45deg, #275775, #3a1f75, #560d7d, #056a79);  
   background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
+  animation: gradient 10s ease infinite;
 
   @media (max-width: 600px) {
-    padding: 80px 0;
+    padding: 60px 0;
+    background: #fff;
   }
 }
 

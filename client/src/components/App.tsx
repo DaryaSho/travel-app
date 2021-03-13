@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import { useHttp } from '../hooks/http.hook';
 import Header from './Header';
-import Explore from './Explore';
-import TextBlock from './TextBlock';
 import Footer from './Footer';
 import Home from '../pages/Home';
+import CountryCard from './CountryCard';
+import CountyCard from './CountryCard/CountryCard';
+import countryImg from '../assets/temp/iceland_main.png';
 
 const App: React.FC = () => {
   const [countries, setCountries] = useState([]);
@@ -27,11 +28,10 @@ const App: React.FC = () => {
   // }
 
   return (
-    <div className="wrapper">
+    <div className='wrapper'>
       <Header />
-      {/* <Route path="/" component={Home} exact /> */}
-      <Explore />
-      <TextBlock />
+      <Route path='/' component={Home} exact />
+      <CountyCard name='Iceland' capital='REYKJAVIK' image={countryImg} />
       <Footer />
     </div>
   );

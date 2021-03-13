@@ -1,14 +1,14 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Search from './Search';
-import Lang from './Lang';
+import Search from '../Search';
+import Lang from '../Lang';
 import logo from '../../assets/icons/logo.svg';
 import './styles.scss';
 
 const Header: React.FC = () => {
   return (
-    <div className="header">
+    <header className="header">
       <div className="container header__container">
         <Link to="/">
           <h4 className="header__title">
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
           <li className="header__inputs-item"><Lang /></li>
         </ul> */}
       </div>
-    </div>
+    </header>
   );
 };
 

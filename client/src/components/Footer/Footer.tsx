@@ -6,7 +6,7 @@ import rsschool from '../../assets/icons/rs_school.svg';
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
     <div className='container container__footer'>
         <div className='github__container'>
           <Github github='hotinec' />
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
       </ a>
     </div>
     </div>
-    </div>
+    </footer>
   );
 };
 
