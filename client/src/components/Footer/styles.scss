@@ -1,0 +1,44 @@
+@import '../../styles/layout/mixins.scss';
+
+.container__footer {
+  @include flex();
+}
+
+.footer {
+  padding: 10px 0;
+  background-color: #181E25;  
+  text-transform: uppercase;
+  color: #b6b6b6;
+  font-size: 1rem;
+  @include flex();
+}
+
+.github__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+
+  &>* {
+    margin: 0 5px;
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+}
+
+.rschool {
+  @include flex();
+  width: fit-content;
+
+  &__logo {
+    width: 90px;
+    height: auto;
+    margin-left: 10px; 
+
+    @media (max-width: 400px) {
+      width: 70px;
+    }
+  }
+}
