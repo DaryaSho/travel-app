@@ -14,7 +14,7 @@ const CountyCard: React.FC<ICountyCard> = ({ name, capital, image }) => {
     <div
       className='country-card'
       style={{
-        backgroundImage: image,
+        backgroundImage: `url(${image})`,
       }}
     >
       <div className='container'>
