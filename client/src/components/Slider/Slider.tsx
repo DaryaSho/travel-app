@@ -13,7 +13,7 @@ import four from '../../assets/temp/iceland_main.jpg';
 
 const array = [one, two, three, four];
 
-const SliderC: React.FC = () => {
+const SliderC: React.FC<any> = ({ places }) => {
   const [nav1, setNav1] = useState<any>(undefined);
   const [nav2, setNav2] = useState<any>(undefined);
 
@@ -49,23 +49,25 @@ const SliderC: React.FC = () => {
     ref: (slider: any) => (slider2 = slider),
   };
 
+  console.log('pl: ', places);
+
   return (
     <section className='slider'>
       <div className='container'>
         <Slider {...settings}>
-          {array.map((item) => {
+          {places.map((item: any) => {
             return (
-              <div key={item}>
-                <img src={item} alt={item} />
+              <div key={item.toString()}>
+                <img src={item.imageUrl} alt={item.name} />
               </div>
             );
           })}
         </Slider>
         <Slider {...settingsTwo}>
-          {array.map((item) => {
+          {places.map((item: any) => {
             return (
-              <div key={item} className='slider-bottom__item'>
-                <img src={item} alt={item} />
+              <div key={item.toString()} className='slider-bottom__item'>
+                <img src={item.imageUrl} alt={item.name} />
               </div>
             );
           })}

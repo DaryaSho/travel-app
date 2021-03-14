@@ -5,11 +5,12 @@ import './styles.scss';
 
 interface Button {
   text: string;
+  onClick?: any
 }
 
-const Button: React.FC<Button> = ({ text }) => {
+const Button: React.FC<Button> = ({ text, onClick }) => {
   return (
-    <button className='button btn btn__main'>
+    <button className='button btn btn__main' onClick={() => onClick()}>
       <p>{text}</p>
       <img src={arrow} alt='arrow' />
     </button>
