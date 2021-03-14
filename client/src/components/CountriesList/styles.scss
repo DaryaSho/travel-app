@@ -1,0 +1,39 @@
+.countries {
+  &__container {
+    padding-top: 115px;
+    padding-bottom: 50px;
+    padding-left: 120px;
+  }
+
+  &__item {
+    color: #fff;
+
+    &-name {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 72px;
+    }
+
+    &-capital {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    background: linear-gradient(90deg, #F27A54 0%, #A154F2 100%);
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 13px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+
+    &-text {
+      margin-right: 15px;
+    }
+  }
+}

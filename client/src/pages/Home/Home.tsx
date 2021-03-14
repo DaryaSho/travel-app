@@ -1,9 +1,10 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
+import CountryList from '../../components/CountriesList';
 
 const Home: React.FC = () => {
   return (
-    <h1>Home</h1>
+    <CountryList />
   );
 };
 

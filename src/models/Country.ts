@@ -9,8 +9,10 @@ export interface ICountry extends Document {
     type: string
   };
   localizations: [{
+    lang: string;
     name: string;
     capital: string;
+    description: string
   }];
 }
 

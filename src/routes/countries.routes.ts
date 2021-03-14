@@ -4,7 +4,7 @@ import CountriesController from '../controllers/countriesController';
 const countriesRouter: Router = Router();
 
 countriesRouter.get(
-  '/xxx',
+  '/countries-list',
   CountriesController.getAllCountries
 );
 
