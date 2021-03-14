@@ -1,0 +1,38 @@
+.search {
+  width: 500px;
+  position: relative;
+
+  &__input {
+    padding-left: 13px;
+    padding-right: 25%;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    font-size: 14px; 
+    width: 100%; 
+    box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.28), inset 0px 1px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  ::-webkit-input-placeholder {
+    color: #747D88;
+    text-transform: uppercase;
+  }
+
+  &__btns {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(180deg, #F27A54 0%, #A154F2 100%);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.149), inset 0px 1px 2px rgba(0, 0, 0, 0.156);
+  }
+}
