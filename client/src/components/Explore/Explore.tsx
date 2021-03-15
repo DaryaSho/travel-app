@@ -1,19 +1,21 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 import './styles.scss';
+import { useTranslation, Trans } from 'react-i18next';
 import Button from '../Button';
 
 const Explore: React.FC = () => {
+  const { t, i18n } = useTranslation();
   return (
     <section className='explore parallax'>
       <div className='container'>
         <h1 className='explore__title'>
-          Discover the
-          <br />
-          planet
+        <Trans i18nKey="Discover the planet">
+          Discover the<br />planet
+        </Trans>
         </h1>
         <a href='#explore'>
-          <Button text='Explore' />
+          <Button text={t('Explore')} />
         </a>
       </div>
     </section>
