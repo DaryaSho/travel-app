@@ -1,6 +1,7 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { useTranslation, Trans } from 'react-i18next';
 import Button from '../Button';
 import './styles.scss';
 
@@ -15,6 +16,7 @@ const CountyCard: React.FC<ICountyCard> = ({
   name, capital, image, id,
 }) => {
   const history = useHistory();
+  const { t, i18n } = useTranslation();
 
   const toCountry = () => {
     history.push({
@@ -36,7 +38,7 @@ const CountyCard: React.FC<ICountyCard> = ({
       <div className='container'>
         <h2 className='country-card__name'>{name}</h2>
         <h3 className='country-card__capital'>{capital}</h3>
-        <Button text='Find out more' onClick={toCountry} />
+        <Button text={t('Find out more')} onClick={toCountry} />
       </div>
     </div>
   );
