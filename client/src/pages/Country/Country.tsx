@@ -37,8 +37,6 @@ const Country: React.FC = () => {
     return (<h2>Loading</h2>);
   }
 
-  console.log(country);
-
   return (
     <div>
       <CountryHeader

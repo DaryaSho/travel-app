@@ -3,7 +3,7 @@ import React from 'react';
 import Search from '../Search';
 import './styles.scss';
 
-const BeInspiredSection: React.FC = () => {
+const BeInspiredSection: React.FC<{search: any}> = ({ search }) => {
   return (
     <section className='text-section parallax'>
       <div className='container'>
@@ -12,7 +12,7 @@ const BeInspiredSection: React.FC = () => {
           Travel.
         </p>
         <div className='search-wrapper'>
-          <Search />
+          <Search setSearch={search} />
         </div>
       </div>
     </section>

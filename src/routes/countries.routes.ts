@@ -9,6 +9,11 @@ countriesRouter.get(
 );
 
 countriesRouter.get(
+  '/countries-list/:name',
+  CountriesController.getCountriesByName
+);
+
+countriesRouter.get(
   '/:id',
   CountriesController.getCountryById
 );

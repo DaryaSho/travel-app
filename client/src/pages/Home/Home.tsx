@@ -29,7 +29,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <Explore />
-      <BeInspiredSection />
+      <BeInspiredSection search={setCountries} />
       {countries.map((country: any) => (
         <CountyCard
           key={country.id}
