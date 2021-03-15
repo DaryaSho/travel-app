@@ -1,0 +1,20 @@
+.container {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+}
+
+.block {
+    width: 250px;
+    height: 200px;
+    background-color: rgba(150, 150, 150, .3);
+    border-radius: 5px;
+    box-shadow: 0 0 5px white;
+}

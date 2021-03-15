@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Home from '../pages/Home';
 import Country from '../pages/Country';
 import iceland from '../assets/temp/iceland_main.jpg';
+import Widget from './Widget/Widget';
 
 const App: React.FC = () => {
   const [countries, setCountries] = useState([]);
@@ -28,6 +29,7 @@ const App: React.FC = () => {
 
   return (
     <div className='wrapper'>
+      <Widget/>
       <Header />
       <Route path='/' component={Home} exact />
       <Country />
