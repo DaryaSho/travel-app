@@ -1,4 +1,5 @@
 /* eslint-disable arrow-body-style */
+/* eslint import/no-unresolved: 2 */
 import React from 'react';
 import './styles.scss';
 import { useTranslation, Trans } from 'react-i18next';
