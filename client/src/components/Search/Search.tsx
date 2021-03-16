@@ -17,7 +17,7 @@ const Search: React.FC<{setSearch: any}> = ({ setSearch }) => {
   const fetchCountries = async () => {
     try {
       console.log(inputValue);
-      const fetched = await request(`/api/countries/countries-list/${inputValue}`, 'GET', null);
+      const fetched = await request(`/api/countries/countries-list/${inputValue}?lang=${i18n.language}`, 'GET', null);
       setSearch(fetched);
     } catch (e) {}
   };

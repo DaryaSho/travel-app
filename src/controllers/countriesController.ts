@@ -10,8 +10,7 @@ const placeExcludedFields = { _id: 0, countryId: 0, lang: 0, localizations: 0 };
 class CountriesController {
   async getAllCountries (req:Request, res:Response): Promise<void> {
     try {
-      const lang = req.query.lang || DEFAULT_LANG;
-      console.log(DEFAULT_LANG);
+      const lang = (req.query.lang || DEFAULT_LANG).toString().toUpperCase();
       const countries = await Country.aggregate()
         .match({ localizations: { $elemMatch: { lang } } })
         .unwind('localizations')
@@ -36,7 +35,7 @@ class CountriesController {
     try {
       const { name } = req.params;
       console.log('name: ', name);
-      const lang = req.query.lang || DEFAULT_LANG;
+      const lang = (req.query.lang || DEFAULT_LANG).toString().toUpperCase();
       console.log(DEFAULT_LANG);
       let countries = await Country.aggregate()
         .match({ localizations: { $elemMatch: { lang } } })
@@ -67,7 +66,7 @@ class CountriesController {
   async getCountryById (req:Request, res:Response): Promise<void> {
     try {
       const { id } = req.params;
-      const lang = req.query.lang || DEFAULT_LANG;
+      const lang = (req.query.lang || DEFAULT_LANG).toString().toUpperCase();
 
       const country = await Country.aggregate()
         .match({ _id: Types.ObjectId(id) })

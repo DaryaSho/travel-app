@@ -2,8 +2,6 @@
 import React, { useState } from 'react';
 import './styles.scss';
 import { useTranslation } from 'react-i18next';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-// import i18n from '../../localization/i18n';
 
 const Lang: React.FC = () => {
   const { t, i18n } = useTranslation();

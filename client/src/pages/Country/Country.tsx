@@ -2,6 +2,7 @@
 /* eslint-disable arrow-body-style */
 import React, { useState, useCallback, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useHttp } from '../../hooks/http.hook';
 import Video from '../../components/Video';
 import Slider from '../../components/Slider';
@@ -11,6 +12,7 @@ import Description from '../../components/CountryDescription';
 const Country: React.FC = () => {
   const location = useLocation();
   const { id } = location.state;
+  const { t, i18n } = useTranslation();
 
   const [country, setCountry] = useState({
     name: '',
@@ -24,10 +26,10 @@ const Country: React.FC = () => {
 
   const fetchCountries = useCallback(async () => {
     try {
-      const fetched = await request(`/api/countries/${id}`, 'GET', null);
+      const fetched = await request(`/api/countries/${id}?lang=${i18n.language}`, 'GET', null);
       setCountry(fetched);
     } catch (e) {}
-  }, [request]);
+  }, [request, i18n.language]);
 
   useEffect(() => {
     fetchCountries();
