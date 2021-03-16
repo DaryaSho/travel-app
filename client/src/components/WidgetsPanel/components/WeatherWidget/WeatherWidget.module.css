@@ -2,16 +2,40 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     border-right: 1px solid white;
     border-left: 1px solid white;
 }
+.container > img {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.container > * {
+    margin: 0 5px;
+}
 
 .italic {
-    font-style: italic;
+    font-size: 1rem;
 }
 
 .temp {
     font-size: 2.5rem;
+}
+
+@media (max-width: 650px) {
+    .container {
+        border-left: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        border: none;
+    }
+
+    .temp {
+        font-size: 2rem;   
+    }
 }

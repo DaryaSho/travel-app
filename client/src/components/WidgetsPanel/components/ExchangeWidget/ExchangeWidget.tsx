@@ -1,5 +1,9 @@
+/* typescript-eslint/explicit-module-boundary-types */
 import React, { useEffect, useState } from 'react';
 import styles from './ExchangeWidget.module.css';
+import euroIcon from '../../../../assets/icons/euro.svg';
+import usdIcon from '../../../../assets/icons/dollar.svg';
+import rubIcon from '../../../../assets/icons/ruble.svg';
 
 const ExchangeWidget = ({ currency }: { currency: string }) => {
   const [eur, setEur] = useState(0);
@@ -26,9 +30,9 @@ const ExchangeWidget = ({ currency }: { currency: string }) => {
 
   return (
     <div className={styles.container}>
-      <p>{`EUR: ${eur.toFixed(2)}`}</p>
-      <p>{`USD: ${usd.toFixed(2)}`}</p>
-      <p>{`RUB: ${rub.toFixed(2)}`}</p>
+      <p><img className={styles.currency__logo} src={euroIcon} alt='eur' />{`EUR: ${eur.toFixed(2)}`}</p>
+      <p><img className={styles.currency__logo} src={usdIcon} alt='usd' />{`USD: ${usd.toFixed(2)}`}</p>
+      <p><img className={styles.currency__logo} src={rubIcon} alt='rub' />{`RUB: ${rub.toFixed(2)}`}</p>
     </div>
   );
 };

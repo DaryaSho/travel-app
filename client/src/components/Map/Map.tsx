@@ -27,7 +27,7 @@ const Map = ({ capital }: {capital: string}) => {
       // @ts-ignore
       longitude={capital ? capitalCoordinates[capital][1] : 0}
       zoom={5}
-      mapStyle='mapbox://styles/mapbox/satellite-streets-v11'
+      mapStyle='mapbox://styles/mapbox/dark-v10'
       mapboxApiAccessToken={mapboxgl.accessToken}>
       <Marker
         // @ts-ignore

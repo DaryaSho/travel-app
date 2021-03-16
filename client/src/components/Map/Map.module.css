@@ -1,6 +1,7 @@
 .marker {
-    width: 15px;
-    height: 15px;
-    background-color: rgba(255, 0, 0, 0.7);
-    border-radius: 50%;
+    background-image: url('../../assets/icons/marker.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
 }

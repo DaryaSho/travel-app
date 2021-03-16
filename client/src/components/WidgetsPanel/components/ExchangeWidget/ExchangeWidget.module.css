@@ -4,4 +4,22 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    padding: 0 5px;
 }
+
+.container > p {
+    display: flex;
+}
+
+.currency__logo {
+    width: 15px;
+    margin-right: 5px;
+}
+
+@media (max-width: 1000px) {
+    .currency__logo {
+        width: 12   px;
+        margin-right: 2px;
+    }
+}
+
