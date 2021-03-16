@@ -1,0 +1,15 @@
+.container {
+    display: grid;
+    grid-template-areas: 't w m';
+    background-color: #181E25;
+    color: white;
+    border-top: 1px solid white;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
