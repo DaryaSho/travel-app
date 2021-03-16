@@ -55,7 +55,9 @@ const Country: React.FC = () => {
       <Description text={country.description} />
       <Video url={country.videoUrl} />
       <Slider places={country.places} />
-      <Map capital={country.capital}/>
+      {
+        country.capital ? <Map capital={country.capital}/> : null
+      }
     </div>
   );
 };
