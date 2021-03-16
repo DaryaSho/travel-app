@@ -3,6 +3,22 @@ html {
   font-size: 10px;
   user-select: none;
   scroll-behavior: smooth;
+  --scrollbarBG: #181E25;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body {
+  scrollbar-width: thin;
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #A154F2 0%, #F27A54 100%);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
 }
 
 *,
@@ -16,6 +32,8 @@ body {
   font-size: 15px;
   margin: 0;
 }
+
+
 
 .wrapper {
   position: relative;

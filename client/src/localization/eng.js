@@ -2,8 +2,9 @@ const eng = {
   translations: {
     English: 'English',
     Russian: 'Russian',
-    'Discover the planet': 'Discover the<br />planet',
+    Belarusian: 'Belarusian',
     Explore: 'Explore',
+    'Discover the planet': 'Discover the<br />planet',
     'Be inspired Travel': 'Be inspired. <br /> Travel.',
     'Search country': 'Search country',
     'Find out more': 'Find out more',
