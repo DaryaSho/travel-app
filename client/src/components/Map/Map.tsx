@@ -1,8 +1,10 @@
 // ts ignore
-import mapboxgl from 'mapbox-gl';
+import mapboxgl, { FillPaint } from 'mapbox-gl';
 import React from 'react';
 // ts ignore
-import ReactMapGL, { Marker, Source, Layer } from 'react-map-gl';
+import ReactMapGL, {
+  Marker, Source, Layer, FullscreenControl,
+} from 'react-map-gl';
 // ts ignore
 import 'mapbox-gl/dist/mapbox-gl.css';
 import styles from './Map.module.css';
@@ -29,14 +31,21 @@ const Map = ({ capital }: {capital: string}) => {
     zoom: 5,
   });
 
+  const fullscreenControlStyle = {
+    right: 10,
+    top: 10,
+  };
+
   return (
     <ReactMapGL
       {...viewport}
       width={'100%'}
       height={'500px'}
+
       onViewportChange={(view: any) => setViewport(view)}
       mapStyle='mapbox://styles/mapbox/dark-v10'
       mapboxApiAccessToken={mapboxgl.accessToken}>
+      <FullscreenControl style={fullscreenControlStyle} />
       <Marker
         // @ts-ignore
         latitude={capital ? capitalCoordinates[capital][0] : 0}
@@ -44,6 +53,11 @@ const Map = ({ capital }: {capital: string}) => {
         longitude={capital ? capitalCoordinates[capital][1] : 0} >
         <div className={styles.marker}/>
       </Marker>
+      <Source id='bound' data='mapbox://mapbox.mapbox-streets-v8' type='geojson'>
+        <Layer source='bound' type='fill' paint={{
+          'fill-color': '#db1616',
+        }}/>
+      </Source>
     </ReactMapGL>
   );
 };
