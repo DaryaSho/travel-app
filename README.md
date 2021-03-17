@@ -4,7 +4,7 @@
 
 ## Локальный запуск:
 
-` $ git clone https://github.com/DaryaSho/travel-app.git -b dev `
+`$ git clone https://github.com/DaryaSho/travel-app.git -b dev `
 
 ` $ cd travel-app `
 
