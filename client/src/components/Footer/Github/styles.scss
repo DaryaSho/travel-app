@@ -1,0 +1,20 @@
+.github {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+
+  &:hover {
+    color: white;
+  }
+
+  &__logo {
+    width: 30px;
+    margin-bottom: 5px;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+}

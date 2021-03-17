@@ -1,0 +1,40 @@
+.header {
+  background-color: #181E25;
+  color: #fff;
+  padding: 15px 0;
+  
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__inputs {
+    display: flex;
+  }
+
+  &__inputs-item {
+    margin-right: 13px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 2rem;
+    display: flex;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__container {
+    width: 95% !important;
+  }
+}
+
+.logo {
+  margin: 0 5px;
+  width: 20px;
+}

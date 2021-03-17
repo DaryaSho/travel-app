@@ -1,0 +1,26 @@
+.btn {
+  background: linear-gradient(90deg, #F27A54 0%, #A154F2 100%);
+  border-radius: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 1.5s ease-out all;
+
+  @media (max-width: 400px) {
+    font-size: 1.2rem;
+  } 
+
+  p {
+    margin-right: 40px;
+  }
+
+  &:hover {
+    opacity: 1;
+    background: linear-gradient(90deg, #e66842 0%, #792ec9 100%);
+  }
+}
