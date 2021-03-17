@@ -30,9 +30,9 @@ const ExchangeWidget = ({ currency }: { currency: string }) => {
 
   return (
     <div className={styles.container}>
-      <p><img className={styles.currency__logo} src={euroIcon} alt='eur' />{`EUR: ${eur.toFixed(2)}`}</p>
-      <p><img className={styles.currency__logo} src={usdIcon} alt='usd' />{`USD: ${usd.toFixed(2)}`}</p>
-      <p><img className={styles.currency__logo} src={rubIcon} alt='rub' />{`RUB: ${rub.toFixed(2)}`}</p>
+      <p><img className={styles.currency__logo} src={euroIcon} alt='eur' />{`${eur.toFixed(2)}`}</p>
+      <p><img className={styles.currency__logo} src={usdIcon} alt='usd' />{`${usd.toFixed(2)}`}</p>
+      <p><img className={styles.currency__logo} src={rubIcon} alt='rub' />{`${rub.toFixed(2)}`}</p>
     </div>
   );
 };

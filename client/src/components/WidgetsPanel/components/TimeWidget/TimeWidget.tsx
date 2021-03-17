@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from 'react';
 
-const TimeWidget = ({ capital }: { capital: string }) => {
+const TimeWidget = ({ iso, lang }: { iso: string, lang: string }) => {
   const timeZones = {
-    Rome: 'Europe/Rome',
-    Washington: 'America/New_York',
-    Reykjavik: 'Atlantic/Reykjavik',
-    Bern: 'Europe/Zurich',
-    Moscow: 'Europe/Moscow',
-    Tokyo: 'Asia/Tokyo',
-    Lisbon: 'Europe/Lisbon',
-    Lima: 'America/Lima',
+    IT: 'Europe/Rome',
+    US: 'America/New_York',
+    IS: 'Atlantic/Reykjavik',
+    CH: 'Europe/Zurich',
+    RU: 'Europe/Moscow',
+    JP: 'Asia/Tokyo',
+    PT: 'Europe/Lisbon',
+    PE: 'America/Lima',
   };
 
-  const getTime = () => (new Date().toLocaleString('en-US', {
+  const locales = {
+    eng: 'en-US',
+    rus: 'ru-RU',
+    bel: 'ru-BY',
+  };
+
+  // @ts-ignore
+  const getTime = () => (new Date().toLocaleString(locales[lang], {
     // @ts-ignore
-    timeZone: timeZones[capital],
+    timeZone: timeZones[iso],
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
