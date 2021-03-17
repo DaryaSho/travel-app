@@ -1,3 +1,4 @@
+/* import/no-unresolved */
 import mapboxgl from 'mapbox-gl';
 import React from 'react';
 import ReactMapGL, { Marker, Source, Layer } from 'react-map-gl';
