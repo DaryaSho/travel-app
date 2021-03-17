@@ -16,7 +16,7 @@ const Explore: React.FC = () => {
         </Trans>
         </h1>
         <a href='#explore'>
-          <Button text={t('Explore')} />
+          <Button text={t('Explore')} onClick={() => null}/>
         </a>
       </div>
     </section>
