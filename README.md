@@ -13,10 +13,12 @@
 Создайте файл .env в корне приложения
 
 В созданном файле укажите переменные окружения:  
-` $ PORT=8080
+```
+PORT=8080
 MONGODB_URL=mongodb+srv://travelDB:12345@cluster0.brvwp.mongodb.net/travel?retryWrites=true&w=majority
 jwtSecret=Travel_App
-DEFAULT_LANG=ENG `
+DEFAULT_LANG=ENG 
+```
 
 ` $ cd client `
 
