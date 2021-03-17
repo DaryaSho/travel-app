@@ -1,5 +1,6 @@
 const eng = {
   translations: {
+    Language: 'Language',
     English: 'English',
     Russian: 'Russian',
     Belarusian: 'Belarusian',

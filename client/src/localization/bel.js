@@ -1,5 +1,6 @@
 const rus = {
   translations: {
+    Language: 'Мова',
     English: 'Аглійская',
     Russian: 'Руская',
     Explore: 'Спазнавай',

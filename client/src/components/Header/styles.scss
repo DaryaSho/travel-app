@@ -28,6 +28,10 @@
     line-height: 1;
     text-transform: uppercase;
   }
+
+  &__container {
+    width: 95% !important;
+  }
 }
 
 .logo {

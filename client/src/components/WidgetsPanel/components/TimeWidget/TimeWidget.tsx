@@ -39,7 +39,7 @@ const TimeWidget = ({ iso, lang }: { iso: string, lang: string }) => {
   useEffect(() => {
     setTimeout(tick, 1000);
     // @ts-ignore
-    return clearInterval(tick);
+    return () => clearTimeout(tick);
   });
 
   return (

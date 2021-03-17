@@ -1,38 +1,6 @@
 .lang {
   position: relative;
-  width: 150px;
   font-size: 14px;
-  padding-left: 13px;
-  padding-right: 13px;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  border-radius: 16px;
-  color: black;
   cursor: pointer;
-  background-image: linear-gradient(to top, #f9f9f9, #fff 23%);
-  display: grid;
-  grid-template-areas: "select";
   align-items: center;
-
-  &:not(.select--multiple):after {
-    content: "";
-    width: 0.8em;
-    height: 0.5em;
-    color: black;
-    background-color: #747D88;
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-    justify-self: end;
-  }
-
-  @media (max-width: 500px) {
-    width: 100px;  
-  }
-}
-
-select,
-.lang:after {
-  grid-area: select;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
