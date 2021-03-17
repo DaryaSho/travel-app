@@ -12,17 +12,18 @@ const Search: React.FC<{setSearch: any}> = ({ setSearch }) => {
   const { t, i18n } = useTranslation();
   const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
-    console.log(event.target.value);
-    fetchCountries();
   };
 
-  const fetchCountries = async () => {
+  const fetchCountries = useCallback(async () => {
     try {
-      console.log(inputValue);
       const fetched = await request(`/api/countries/countries-list/${inputValue}?lang=${i18n.language}`, 'GET', null);
       setSearch(fetched);
     } catch (e) {}
-  };
+  }, [inputValue]);
+
+  useEffect(() => {
+    fetchCountries();
+  }, [fetchCountries]);
 
   return (
     <div className="search">
@@ -30,6 +31,7 @@ const Search: React.FC<{setSearch: any}> = ({ setSearch }) => {
         value={inputValue}
         onChange={onChangeHandler}
         type="text"
+        autoFocus
         className="search__input"
         placeholder={t('Search country')}/>
       <div className="search__btns">
