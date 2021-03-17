@@ -27,7 +27,7 @@ const WeatherWidget = ({ iso, lang }: { iso: string, lang: string }) => {
 
   useEffect(() => {
     // @ts-ignore
-    fetch(`http://api.weatherapi.com/v1/current.json?key=4561c5cd7b6f4a87898134601210702&lang=${languages[lang]}&q=${capitals[iso]}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=4561c5cd7b6f4a87898134601210702&lang=${languages[lang]}&q=${capitals[iso]}`)
       // eslint-disable-next-line no-return-assign
       .then((res) => res.json())
       .then((result) => {

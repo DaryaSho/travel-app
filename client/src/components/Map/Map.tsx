@@ -32,12 +32,25 @@ const Map = ({ lang, iso }: { lang: string, iso: string }) => {
     top: 10,
   };
 
+  const changeMapLanguage = (map: any) => {
+    map.getStyle().layers.forEach((layer: any) => {
+      if (layer.id.endsWith('-label')) {
+        map.setLayoutProperty(layer.id, 'text-field', [
+          'coalesce',
+          ['get', 'name_zh-Hant'],
+          ['get', 'name'],
+        ]);
+      }
+    });
+  };
+
   return (
     <ReactMapGL
       {...viewport}
       width={'100%'}
       height={'500px'}
-
+      // @ts-ignore
+      onStyleLoad={changeMapLanguage}
       onViewportChange={(view: any) => setViewport(view)}
       mapStyle='mapbox://styles/mapbox/dark-v10'
       mapboxApiAccessToken={mapboxgl.accessToken}>
