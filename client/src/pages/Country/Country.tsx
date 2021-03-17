@@ -8,6 +8,8 @@ import Video from '../../components/Video';
 import Slider from '../../components/Slider';
 import CountryHeader from '../../components/CountryHeader';
 import Description from '../../components/CountryDescription';
+import WidgetsPanel from '../../components/WidgetsPanel/WidgetsPanel';
+import Map from '../../components/Map/Map';
 
 const Country: React.FC = () => {
   const location = useLocation();
@@ -21,6 +23,7 @@ const Country: React.FC = () => {
     description: '',
     videoUrl: '',
     places: [],
+    currency: '',
   });
   const { loading, request } = useHttp();
 
@@ -45,9 +48,14 @@ const Country: React.FC = () => {
         name={country.name}
         capital={country.capital}
         image={country.imageUrl} />
+      {
+        country.capital ? <WidgetsPanel currency={country.currency}
+                                        capital={country.capital}/> : null
+      }
       <Description text={country.description} />
       <Video url={country.videoUrl} />
       <Slider places={country.places} />
+      <Map capital={country.capital}/>
     </div>
   );
 };

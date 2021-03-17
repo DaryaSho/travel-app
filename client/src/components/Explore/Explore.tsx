@@ -1,4 +1,5 @@
 /* eslint-disable arrow-body-style */
+/* eslint import/no-unresolved: 2 */
 import React from 'react';
 import './styles.scss';
 import { useTranslation, Trans } from 'react-i18next';
@@ -15,7 +16,7 @@ const Explore: React.FC = () => {
         </Trans>
         </h1>
         <a href='#explore'>
-          <Button text={t('Explore')} />
+          <Button text={t('Explore')} onClick={() => null}/>
         </a>
       </div>
     </section>

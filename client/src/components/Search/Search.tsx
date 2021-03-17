@@ -16,10 +16,6 @@ const Search: React.FC<{setSearch: any}> = ({ setSearch }) => {
 
   const fetchCountries = useCallback(async () => {
     try {
-<<<<<<< HEAD
-      console.log(inputValue);
-=======
->>>>>>> 3a3ce359010de30edceea11e46ebd5f6d32f95bb
       const fetched = await request(`/api/countries/countries-list/${inputValue}?lang=${i18n.language}`, 'GET', null);
       setSearch(fetched);
     } catch (e) {}

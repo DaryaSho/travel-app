@@ -7,7 +7,7 @@ import './styles.scss';
 const BeInspiredSection: React.FC<{search: any}> = ({ search }) => {
   const { t, i18n } = useTranslation();
   return (
-    <section className='text-section parallax'>
+    <section className='text-section parallax' id='explore'>
       <div className='container'>
         <p className='text text__greeting'>
         <Trans i18nKey="Be inspired Travel">
