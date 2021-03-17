@@ -24,6 +24,7 @@ const Country: React.FC = () => {
     videoUrl: '',
     places: [],
     currency: '',
+    ISOCode: '',
   });
   const { loading, request } = useHttp();
 
@@ -49,13 +50,15 @@ const Country: React.FC = () => {
         capital={country.capital}
         image={country.imageUrl} />
       {
-        country.capital ? <WidgetsPanel currency={country.currency}
-                                        capital={country.capital}/> : null
+        country.ISOCode ? <WidgetsPanel currency={country.currency}
+                                        iso={country.ISOCode} lang={i18n.language}/> : null
       }
       <Description text={country.description} />
       <Video url={country.videoUrl} />
       <Slider places={country.places} />
-      <Map capital={country.capital}/>
+      {
+        country.ISOCode ? <Map lang={i18n.language} iso={country.ISOCode}/> : null
+      }
     </div>
   );
 };

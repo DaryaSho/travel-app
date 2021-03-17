@@ -4,16 +4,19 @@ import WeatherWidget from './components/WeatherWidget/WeatherWidget';
 import TimeWidget from './components/TimeWidget/TimeWidget';
 import ExchangeWidget from './components/ExchangeWidget/ExchangeWidget';
 
-const WidgetsPanel = ({ capital, currency }: { capital: string, currency: string}) => {
+const WidgetsPanel = ({ iso, currency, lang }: {
+  iso: string,
+  currency: string,
+  lang: string}) => {
   const test = 'test';
 
   return (
     <div className={styles.container}>
       <div className={styles.cell}>
-        <TimeWidget capital={capital}/>
+        <TimeWidget iso={iso} lang={lang}/>
       </div>
       <div className={styles.cell}>
-        <WeatherWidget capital={capital}/>
+        <WeatherWidget iso={iso} lang={lang}/>
       </div>
       <div className={styles.cell}>
         <ExchangeWidget currency={currency}/>
