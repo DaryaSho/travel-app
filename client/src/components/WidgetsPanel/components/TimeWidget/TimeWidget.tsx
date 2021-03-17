@@ -15,7 +15,7 @@ const TimeWidget = ({ iso, lang }: { iso: string, lang: string }) => {
   const locales = {
     eng: 'en-US',
     rus: 'ru-RU',
-    bel: 'ru-BY',
+    bel: 'uk-UA',
   };
 
   // @ts-ignore
@@ -27,6 +27,7 @@ const TimeWidget = ({ iso, lang }: { iso: string, lang: string }) => {
     second: '2-digit',
     month: 'long',
     day: 'numeric',
+    weekday: 'long',
   }));
 
   const [time, setTime] = useState(getTime());
