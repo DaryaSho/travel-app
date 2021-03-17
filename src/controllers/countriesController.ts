@@ -52,7 +52,7 @@ class CountriesController {
       }
 
       countries = countries.filter((country) => {
-        return country.name.toUpperCase().startsWith(name.toUpperCase());
+        return country.name.toUpperCase().startsWith(name.toUpperCase()) || country.capital.toUpperCase().startsWith(name.toUpperCase());
       });
 
       console.log('c: ', countries);
